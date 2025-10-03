@@ -712,5 +712,81 @@ print("方法5:", ' '.join(map(str, my_list)))  # 1 2 3
 - 括弧付きで表示したい場合は`print(list)`
 - 要素だけを表示したい場合は`print(*list)`
 
+<br>
 
-next day begin from page 98 "modal"
+---
+
+<br>
+
+# モジュール
+
+問題 1<br>
+mathモジュールを利⽤して、cos(120°)の値を求めてください。<br>
+**Python標準ライブラリmathを使用してcos(120°)を計算**
+
+```python
+import math
+
+# 120度をラジアンに変換してcos値を計算
+angle_degrees = 120
+angle_radians = math.radians(angle_degrees)
+cos_value = math.cos(angle_radians)
+
+print(f"cos({angle_degrees}°) = {cos_value}")
+```
+
+**実行結果:**
+```
+cos(120°) = -0.5
+```
+
+**詳細説明:**
+```python
+import math
+
+# 方法1: degrees → radians → cos
+degrees = 120
+radians = math.radians(degrees)  # 120° を ラジアンに変換
+result = math.cos(radians)       # cosine値を計算
+print(f"cos(120°) = {result}")   # -0.5
+
+# 方法2: 直接ラジアン値を使用
+# 120° = 2π/3 ラジアン
+radians_direct = 2 * math.pi / 3
+result2 = math.cos(radians_direct)
+print(f"cos(2π/3) = {result2}")  # -0.5
+
+# 方法3: math.piを使って計算
+result3 = math.cos(math.pi * 2/3)
+print(f"cos(2π/3) = {result3}")  # -0.5
+
+# 数学的確認
+print(f"120° = {math.radians(120)} ラジアン")
+print(f"2π/3 = {2 * math.pi / 3} ラジアン")
+```
+
+**重要なポイント:**
+- Python の `math.cos()` は**ラジアン**を引数として受け取る
+- 度をラジアンに変換: `math.radians(degrees)`
+- ラジアンを度に変換: `math.degrees(radians)`
+- cos(120°) = cos(2π/3) = -0.5
+
+**その他の三角関数例:**
+```python
+import math
+
+angle = 120  # 度
+
+# 三角関数の計算
+cos_val = math.cos(math.radians(angle))
+sin_val = math.sin(math.radians(angle))
+tan_val = math.tan(math.radians(angle))
+
+print(f"sin({angle}°) = {sin_val:.6f}")    # ≈ 0.866025
+print(f"cos({angle}°) = {cos_val:.6f}")    # = -0.5
+print(f"tan({angle}°) = {tan_val:.6f}")    # ≈ -1.732051
+```
+
+問題 2 <br>
+mathモジュールを利⽤して、81の平⽅根を求めてください。<br>
+

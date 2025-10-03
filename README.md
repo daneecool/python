@@ -1,40 +1,21 @@
-### Python training 
+<div align="center">
+=================================================================
+<h1>Python Training・パイソン研修</h1>
+<p style="font-size: 25px; font-weight: bold;">
+  <strong>Date:</strong> 10/2025
+</p>
+<p style="font-size: 25px; font-weight: bold;">
+  <strong>Moderator:</strong> Daniel.J.Q.Goh
+</p>
+=================================================================
+</div>
 
-there is a slight misunderstanding from my site, i though it was an array
-![Alt text](array.png "Image title")
-I hope this is not an array.
+Todo 
+- use [Google Colaboratory(Colab)](https://colab.research.google.com/) to use python withpout installing any python lib in local computer.
+- user [Python.org](https://www.python.org/downloads/) to download only the python lib into local computer. 
 
-![Alt text](venn_diagram.png "Image title")
-1. What the diagram shows
+> **⚠️ Warning**
+> 
+> - user may need to install an IDE 
 
-The rectangle represents all 1000 items.
 
-There are two circles, each representing multiples of
-a and 𝑏
-
-Circle 1: multiples of 𝑎
-
-Circle 2: multiples of 𝑏
-
-The numbers in the diagram mean:
-
-① → multiples of 𝑎 but not b
-
-② → multiples of 𝑏 but not a
-
-③ → multiples of both a and b (this is the intersection, logical AND, 論理積)
-
-④ → neither multiples of 𝑎 nor 𝑏
-
-2. Explanation of the labels
-① + ③ → all multiples of 𝑎
-
-②+③ → all multiples of 𝑏
-
-③ → multiples of both 
-𝑎 and b
-
-④
-④ → numbers that are not multiples of a or b
-
-So “論理積：③” means the logical AND (intersection) of a and b, i.e., numbers that are multiples of both a and b.
