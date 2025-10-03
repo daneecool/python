@@ -18,4 +18,10 @@ Todo
 > 
 > - user may need to install an IDE 
 
-
+<details>
+<summary>🚨 Click to expand information</summary>
+The current Python training program are dedicated to improve employees knowledge base in "Comas Coorporation". 
+<mark style="background-color: yellow;">Do not hessitate to approach any trainer for help and understanding.</mark> 
+Thank You and have a pleasant day during your training. 
+ 
+</details>
