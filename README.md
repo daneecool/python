@@ -22,13 +22,11 @@
 
 > **⚠️ Warning**
 > 
-> - user may need to install an IDE 
+> - user may need to install an ID 
 
 <details>
-<summary>🚨 Click to expand information</summary>
-The current Python training program are dedicated to improve employees knowledge base in "Comas Coorporation". 
-<mark style="background-color: yellow;">Do not hessitate to approach any trainer for help and understanding.</mark> 
-Thank You and have a pleasant day during your training. 
+<summary>🚨 研修の解答・解説</summary>
+解答・解説はpython training.mdに記録される。
  
 </details>
 
