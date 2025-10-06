@@ -3001,6 +3001,44 @@ for i in range(1, 10):
 ※使⽤リスト例<br>
 words = [‘cat’, ‘monkey’, ‘apple’, ‘hi’]
 
+**解答:**
+```python
+words = ['cat', 'monkey', 'apple', 'hi']
+
+# 文字列の長さが5以上のものを表示
+for word in words:
+    if len(word) >= 5:
+        print(word)
+```
+
+**実行結果:**
+```
+monkey
+apple
+```
+
+**解説:**
+- len(word) で文字列の長さを取得
+- len(word) >= 5 で5文字以上かどうかを判定
+- 'cat'(3文字), 'hi'(2文字) は条件に合わず表示されない
+- 'monkey'(6文字), 'apple'(5文字) が条件に合致して表示される
+
+**別解（リスト内包表記）:**
+```python
+words = ['cat', 'monkey', 'apple', 'hi']
+long_words = [word for word in words if len(word) >= 5]
+for word in long_words:
+    print(word)
+```
+
+**別解（一行で表示）:**
+```python
+words = ['cat', 'monkey', 'apple', 'hi']
+
+print("長さが5以上の文字列:")
+[print(word) for word in words if len(word) >= 5]
+```
+
 <br>
 
 ---
@@ -3123,4 +3161,491 @@ print(f"最小値: {minimum}")
 **一回目終了**
 ---
 
-<div>
+</div>
+
+<br>
+
+# 関数
+
+
+問題 1<br>
+次の⽂章の空欄に⼊れるべき語句を、選択肢から選んでください。<br>
+ 関数を呼び出すときに関数に渡す値のことを[（1）]といい、関数か
+ら戻される値のことを[（2）]という。<br>
+ 関数に複数の値を渡すために、[（1）]をカンマ区切りで並べたもの
+を[（3）]と呼ぶ。<br>
+ [（1）]のうち、変数の名前を指定したものを[（4）] 、値が渡されな かった場合に設定されるデフォルト値が決まっているものを[（5）]、
+個数が決まっていないものを[（6）]という。<br>
+【選択肢】<br>
+・戻り値 ・可変⻑引数 ・引数 ・キーワード引数<br>
+・デフォルト引数 ・引数<br>
+
+**解答:**
+- （1）**引数**
+- （2）**戻り値**
+- （3）**引数**（引数リスト/パラメータリスト）
+- （4）**キーワード引数**
+- （5）**デフォルト引数**
+- （6）**可変長引数**
+
+**解説:**
+- **引数（ひきすう）**: 関数に渡す値
+- **戻り値（もどりち）**: 関数から返される値
+- **キーワード引数**: 変数名を指定した引数（例：`func(name="太郎")`）
+- **デフォルト引数**: デフォルト値が設定された引数
+- **可変長引数**: 個数が決まっていない引数（`*args`, `**kwargs`）
+
+<br>
+
+---
+
+<br>
+
+問題 2<br>
+次のようなfunc関数が定義されています。<br>
+
+```python
+def func(a, b=10):
+    return a + b
+```
+
+次のうち、func関数を正しく呼び出せるものを選んでください。<br>
+（1） func()<br>
+（2） func(5)<br>
+（3） func(5, 10)<br>
+（4） func(a = 5)<br>
+（5） func(b = 10)<br>
+（6） func(5, b = 10)<br>
+（7） func(b = 10, a = 5)
+
+**解答:**
+正しく呼び出せるもの：**（2）、（3）、（4）、（6）、（7）**
+
+**各選択肢の解説:**
+- （1） `func()` → **❌ エラー** - 必須引数`a`が不足
+- （2） `func(5)` → **✅ 正常** - `a=5`, `b=10`（デフォルト値）
+- （3） `func(5, 10)` → **✅ 正常** - `a=5`, `b=10`
+- （4） `func(a = 5)` → **✅ 正常** - `a=5`, `b=10`（デフォルト値）
+- （5） `func(b = 10)` → **❌ エラー** - 必須引数`a`が不足
+- （6） `func(5, b = 10)` → **✅ 正常** - `a=5`, `b=10`
+- （7） `func(b = 10, a = 5)` → **✅ 正常** - `a=5`, `b=10`
+
+**ポイント:**
+- `a`は必須引数なので必ず値を渡す必要がある
+- `b`はデフォルト値があるので省略可能
+- キーワード引数は順序を変えても問題ない
+
+<br>
+
+---
+
+<br>
+
+問題3<br>
+関数名： print_hello<br>
+引数列： count<br>
+処理の内容： 引数で渡されたcountの回数だけ、Helloという文字列を出力する。<br>
+※引数の値が3の場合はHelloといいう文字列を3回出力するようにする。
+
+**解答:**
+```python
+def print_hello(count):
+    for i in range(count):
+        print("Hello")
+
+# 関数の実行例
+print_hello(3)
+```
+
+**実行結果:**
+```
+Hello
+Hello
+Hello
+```
+
+**解説:**
+- `range(count)` で0からcount-1まで繰り返し
+- 各反復で"Hello"を出力
+- `count=3` の場合、3回"Hello"が表示される
+
+**別解（一行で出力）:**
+```python
+def print_hello(count):
+    for i in range(count):
+        print("Hello", end=" ")
+    print()  # 最後に改行
+
+# 実行例
+print_hello(3)  # Hello Hello Hello
+```
+
+<br>
+
+---
+
+<br>
+
+問題4<br>
+関数名： get_rectangle_area<br>
+引数列： width, height<br>
+処理の内容： 引数で渡された幅(width)と高さ(height)の値を持つ長方形の面積を返す。
+
+**解答:**
+```python
+def get_rectangle_area(width, height):
+    return width * height
+
+# 関数の実行例
+area = get_rectangle_area(5, 3)
+print(f"長方形の面積: {area}")
+
+# 別の例
+print(f"面積: {get_rectangle_area(10, 7)}")
+```
+
+**実行結果:**
+```
+長方形の面積: 15
+面積: 70
+```
+
+**解説:**
+- 長方形の面積 = 幅 × 高さ
+- `return` 文で計算結果を呼び出し元に返す
+- 戻り値を変数に代入したり、直接表示に使用可能
+
+**型ヒント付きバージョン:**
+```python
+def get_rectangle_area(width: float, height: float) -> float:
+    """長方形の面積を計算する関数
+    
+    Args:
+        width: 長方形の幅
+        height: 長方形の高さ
+    
+    Returns:
+        長方形の面積
+    """
+    return width * height
+```
+
+<br>
+
+---
+
+<br>
+
+問題5<br>
+関数名： get_message<br>
+引数列： name<br>
+処理の内容： 'こんにちは〇〇さん'という文字列を返す。〇〇に引数で渡されたnameの値を入れる。引数が指定されたなかった場合は、'名前無し'という文字列をnameのデフォルト値とする。
+
+**解答:**
+```python
+def get_message(name="名前無し"):
+    return f"こんにちは{name}さん"
+
+# 関数の実行例
+print(get_message("太郎"))     # 引数あり
+print(get_message())          # 引数なし（デフォルト値使用）
+print(get_message("花子"))     # 別の名前
+```
+
+**実行結果:**
+```
+こんにちは太郎さん
+こんにちは名前無しさん
+こんにちは花子さん
+```
+
+**解説:**
+- `name="名前無し"` でデフォルト値を設定
+- 引数が渡されない場合、自動的にデフォルト値が使用される
+- f-string（`f"...{変数}..."`）で文字列に変数を埋め込み
+
+**別解（format使用）:**
+```python
+def get_message(name="名前無し"):
+    return "こんにちは{}さん".format(name)
+
+# または
+def get_message(name="名前無し"):
+    return "こんにちは" + name + "さん"
+```
+
+<br>
+
+---
+
+<br>
+
+問題6<br>
+関数名： get_absolute_value<br>
+引数列： value<br>
+処理の内容： 引数で渡されたvalueの値の絶対値を返す。<br>
+※5.2の絶対値は5.2, -3.3の絶対値は3.3。
+
+**解答:**
+```python
+def get_absolute_value(value):
+    if value >= 0:
+        return value
+    else:
+        return -value
+
+# 関数の実行例
+print(get_absolute_value(5.2))    # 正の数
+print(get_absolute_value(-3.3))   # 負の数
+print(get_absolute_value(0))      # ゼロ
+print(get_absolute_value(-10))    # 負の整数
+```
+
+**実行結果:**
+```
+5.2
+3.3
+0
+10
+```
+
+**解説:**
+- 値が0以上なら、そのまま返す
+- 値が負の場合、マイナスを付けて正の値に変換
+- 絶対値は常に0以上の値
+
+**別解（abs関数使用）:**
+```python
+def get_absolute_value(value):
+    return abs(value)
+```
+
+**別解（三項演算子使用）:**
+```python
+def get_absolute_value(value):
+    return value if value >= 0 else -value
+```
+
+<br>
+
+---
+
+<br>
+
+問題7<br>
+関数名︓ add<br>
+引数列︓ num1, num2<br>
+処理内容︓ 整数num1とnum2を引数に取り、それらの和を
+返す関数を作成してください。<br>
+※実際に関数を動作させる命令⽂も作成する。
+
+**解答:**
+```python
+def add(num1, num2):
+    return num1 + num2
+
+# 関数を動作させる命令文
+result1 = add(10, 20)
+print(f"10 + 20 = {result1}")
+
+result2 = add(5, 15)
+print(f"5 + 15 = {result2}")
+
+# 直接出力する場合
+print(f"3 + 7 = {add(3, 7)}")
+
+# ユーザー入力を使った例
+# num1 = int(input("1つ目の数値: "))
+# num2 = int(input("2つ目の数値: "))
+# print(f"{num1} + {num2} = {add(num1, num2)}")
+```
+
+**実行結果:**
+```
+10 + 20 = 30
+5 + 15 = 20
+3 + 7 = 10
+```
+
+**解説:**
+- `num1 + num2` で2つの引数の和を計算
+- `return` で結果を呼び出し元に返す
+- 戻り値を変数に代入して使用可能
+- 複数の方法で関数を呼び出し、結果を確認
+
+<br>
+
+---
+
+<br>
+
+問題8<br>
+関数名： is_even<br>
+引数： num<br>
+処理内容： 引数の値が偶数ならTrue、奇数ならFalseを返す
+関数を作成してください。<br>
+※実際に関数を動作させる命令⽂も作成する。
+
+**解答:**
+```python
+def is_even(num):
+    return num % 2 == 0
+
+# 関数を動作させる命令文
+print(f"4は偶数? {is_even(4)}")       # True
+print(f"7は偶数? {is_even(7)}")       # False
+print(f"0は偶数? {is_even(0)}")       # True
+print(f"-6は偶数? {is_even(-6)}")     # True
+print(f"-3は偶数? {is_even(-3)}")     # False
+
+# 条件分岐と組み合わせた使用例
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for num in numbers:
+    if is_even(num):
+        print(f"{num}は偶数")
+    else:
+        print(f"{num}は奇数")
+```
+
+**実行結果:**
+```
+4は偶数? True
+7は偶数? False
+0は偶数? True
+-6は偶数? True
+-3は偶数? False
+1は奇数
+2は偶数
+3は奇数
+4は偶数
+5は奇数
+6は偶数
+7は奇数
+8は偶数
+9は奇数
+10は偶数
+```
+
+**解説:**
+- `num % 2 == 0` で2で割った余りが0かどうかを判定
+- 余りが0なら偶数（True）、1なら奇数（False）
+- ブール値（True/False）を返す関数
+
+<br>
+
+---
+
+<br>
+
+問題9<br>
+関数名： get_tail<br>
+引数列： *args<br>
+処理の内容： 可変長引数で渡された複数の引数の中で、末尾の引数の値を返す。<br>
+※get_tail(3, 5, 9, 2)とすると、値2が返されるようにする。
+
+**解答:**
+```python
+def get_tail(*args):
+    return args[-1]
+
+# 関数の実行例
+print(get_tail(3, 5, 9, 2))         # 2
+print(get_tail(1, 2, 3, 4, 5))      # 5
+print(get_tail("a", "b", "c"))      # c
+print(get_tail(10))                 # 10（引数が1つの場合）
+
+# エラーハンドリング付きバージョン
+def get_tail_safe(*args):
+    if len(args) == 0:
+        return None  # または適切なデフォルト値
+    return args[-1]
+
+# テスト
+print(get_tail_safe())              # None
+print(get_tail_safe(100, 200))      # 200
+```
+
+**実行結果:**
+```
+2
+5
+c
+10
+None
+200
+```
+
+**解説:**
+- `*args` で可変長引数を受け取る
+- `args` はタプル形式で引数を格納
+- `args[-1]` で最後の要素（末尾）にアクセス
+- 負のインデックス `-1` は最後の要素を表す
+
+**別解（インデックス使用）:**
+```python
+def get_tail(*args):
+    return args[len(args) - 1]
+```
+
+**応用例:**
+```python
+def get_tail_with_info(*args):
+    print(f"引数の個数: {len(args)}")
+    print(f"全ての引数: {args}")
+    return args[-1]
+
+result = get_tail_with_info(1, 2, 3, 4)
+print(f"末尾の値: {result}")
+```
+
+<br>
+
+---
+
+<br>
+
+# コレクション
+
+問題 1 <br>
+次の説明⽂が、リスト、タプル、辞書、セットのいずれに該
+当するか、答えてください（複数が該当する場合もありま
+す）。<br>
+（1） キーと値のペアを格納する<br>
+（2） 要素の値の重複が許されない<br>
+（3） 要素の値を変更できない<br>
+（4） インデックスで要素にアクセスできる。<br>
+
+<br>
+
+---
+
+<br>
+
+問題 8
+関数名： is_even
+引数： num
+処理内容： 引数の値が偶数ならTrue、奇数ならFalseを返す
+関数を作成してください。
+※実際に関数を動作させる命令⽂も作成する
+
+<br>
+
+---
+
+<br>
+
+問題9
+関数名： get_tail
+引数
+
+問題 2<br>
+次のリストの2番目の要素（20）を99に変更して、リストの
+中身を画面表示してください。<br>
+※nums = [10,20,30,40]<br>
+
+<br>
+
+---
+
+<br>
+
