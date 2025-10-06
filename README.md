@@ -26,7 +26,7 @@
 
 <details>
 <summary>🚨 研修の解答・解説</summary>
-解答・解説はpython training.mdに記録される。
+解答・解説は[python training.md](https://github.com/daneecool/python/blob/main/python%20training.md)に記録される。
  
 </details>
 
