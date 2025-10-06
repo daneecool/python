@@ -10,7 +10,13 @@
 =================================================================
 </div>
 
-Todo 
+<br>
+
+---
+
+<br>
+
+# Todo 
 - use [Google Colaboratory(Colab)](https://colab.research.google.com/) to use python withpout installing any python lib in local computer.
 - user [Python.org](https://www.python.org/downloads/) to download only the python lib into local computer. 
 
@@ -25,3 +31,26 @@ The current Python training program are dedicated to improve employees knowledge
 Thank You and have a pleasant day during your training. 
  
 </details>
+
+<br>
+
+---
+
+<br>
+
+# Study materials (Chinese, Korean, Japanese and English)
+- [Think Python](https://greenteapress.com/thinkpython2/thinkpython2.pdf)
+
+- [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
+
+- [The Recursive Book of Recursion](https://inventwithpython.com/recursion/)
+
+- [The Hitchhiker's Guide to Python](https://docs.python-guide.org/)
+
+- [Python for Everybody](https://do1.dr-chuck.com/pythonlearn/ZH_cn/pythonlearn.pdf)
+
+- [Python for Everybody Chinese](https://github.com/RodenLuo/py4e-cn)
+
+- [Python for Everybody Korean](https://github.com/statkclee/pythonlearn-kr)
+
+- [新・明解Python入門](https://www.bohyoh.com/Books/NewMeikaiPython/body.html)
