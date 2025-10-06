@@ -45,7 +45,7 @@
 
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org/)
 
-- [Python for Everybody](https://do1.dr-chuck.com/pythonlearn/ZH_cn/pythonlearn.pdf)
+- [Python for Everybody English](https://do1.dr-chuck.com/pythonlearn/ZH_cn/pythonlearn.pdf)
 
 - [Python for Everybody Chinese](https://github.com/RodenLuo/py4e-cn)
 
