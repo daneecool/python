@@ -26,7 +26,7 @@
 
 <details>
 <summary>🚨 研修の解答・解説</summary>
-一回目～三回目　解答・解説はpython training.mdに記録される。
+一回目～三回目　解答・解説はpython training.mdに記録される。<br>
 四回目　解答・解説はopencv.mdに記録される。
 </details>
 
