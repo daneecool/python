@@ -1,5 +1,4 @@
 <div align="center">
-=================================================================
 <h1>Python Training・パイソン研修</h1>
 <p style="font-size: 25px; font-weight: bold;">
   <strong>Date:</strong> 10/2025
@@ -7,8 +6,9 @@
 <p style="font-size: 25px; font-weight: bold;">
   <strong>Moderator:</strong> Daniel.J.Q.Goh
 </p>
-=================================================================
 </div>
+
+<br><br>
 
 # 変数
 
